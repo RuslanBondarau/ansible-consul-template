@@ -11,15 +11,7 @@
 - name: Copy config file for consul-template
   template:
     src: "{{ CONSUL_TEMPLATE_CONFIG }}.j2"
-    dest: "{{ CONSUL_BIN_FILE }}/{{ CONSUL_TEMPLATE_CONFIG }}"
-    owner: "{{ CONSUL_TEMPLATE_USER }}"
-    mode: 0755
-  become: true
-
-- name: Copy config file for consul-template
-  template:
-    src: consul-template.service.j2
-    dest: "{{ CONSUL_BIN_FILE }}/{{ CONSUL_TEMPLATE_CONFIG }}"
+    dest: "{{ BIN_DIR }}/{{ CONSUL_TEMPLATE_CONFIG }}"
     owner: "{{ CONSUL_TEMPLATE_USER }}"
     mode: 0755
   become: true
