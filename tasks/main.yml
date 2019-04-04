@@ -7,7 +7,7 @@
     owner: "{{ CONSUL_TEMPLATE_USER }}"
     group: "{{ CONSUL_TEMPLATE_USER }}"
     mode: 0755
-    become: true
+  become: true
 
 - name: Copy config file for consul-template
   template:
@@ -16,7 +16,7 @@
     owner: "{{ CONSUL_TEMPLATE_USER }}"
     group: "{{ CONSUL_TEMPLATE_USER }}"
     mode: 0755
-    become: true
+  become: true
 
 - name: Copy config file for consul-template
   template:
@@ -25,7 +25,7 @@
     owner: "{{ CONSUL_TEMPLATE_USER }}"
     group: "{{ CONSUL_TEMPLATE_USER }}"
     mode: 0755
-    become: true
+  become: true
 
 - name: Solr | Create init.d solrd
   template:
